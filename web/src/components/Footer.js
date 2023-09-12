@@ -43,9 +43,9 @@ const Footer = () => {
             >
               {systemName} {process.env.REACT_APP_VERSION}{' '}
             </a>
-            基于{' '}
+            由xy01dv2基于{' '}
             <a href='https://github.com/songquanpeng' target='_blank'>
-              JustSong
+              JustSong One API
             </a>{' '}
             构建，源代码遵循{' '}
             <a href='https://opensource.org/licenses/mit-license.php'>
