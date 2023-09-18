@@ -89,7 +89,7 @@ _✨ Access all LLM through the standard OpenAI API format, easy to deploy & use
 
 ## Deployment
 ### Docker Deployment
-Deployment command: `docker run --name one-api -d --restart always -p 3000:3000 -e TZ=Asia/Shanghai -v /home/ubuntu/data/one-api:/data justsong/one-api-en`
+Deployment command: `docker run --name one-api -d --restart always -p 3600:3600 -e TZ=Asia/Shanghai -v /home/ubuntu/data/one-api:/data justsong/one-api-en`
 
 Update command: `docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower -cR`
 
@@ -105,7 +105,7 @@ server{
    location / {
           client_max_body_size  64m;
           proxy_http_version 1.1;
-          proxy_pass http://localhost:3000;  # Modify your port accordingly
+          proxy_pass http://localhost:3600;  # Modify your port accordingly
           proxy_set_header Host $host;
           proxy_set_header X-Forwarded-For $remote_addr;
           proxy_cache_bypass $http_upgrade;
@@ -146,7 +146,7 @@ The initial account username is `root` and password is `123456`.
 2. Run:
    ```shell
    chmod u+x one-api
-   ./one-api --port 3000 --log-dir ./logs
+   ./one-api --port 3600 --log-dir ./logs
    ```
 3. Access [http://localhost:3000/](http://localhost:3000/) and log in. The initial account username is `root` and password is `123456`.
 
